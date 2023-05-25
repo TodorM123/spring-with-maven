@@ -7,7 +7,7 @@ pipeline {
     tools {
         nodejs 'nodejs'
         dockerTool 'docker'
-        maven 'Maven 3.9.2'
+        maven 'Maven'
     }
 
     stages {
