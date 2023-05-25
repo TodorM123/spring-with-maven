@@ -10,7 +10,7 @@ pipeline {
         githubPush()
     }
     environment {
-      DOCKERHUB_CREDENTIALS = credentials('Credentials')
+      DOCKERHUB_CREDENTIALS = credentials('dockerhub')
       IMAGE_NAME = 'todormihov/exercise1'
     }
     stages {
@@ -19,7 +19,7 @@ pipeline {
                 cleanWs()
             }
         }
-        
+
         stage('Clone Repo') {
             steps {
                 git branch: 'main', url: 'https://github.com/TodorM123/spring-with-maven'
