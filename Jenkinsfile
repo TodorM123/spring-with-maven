@@ -19,7 +19,6 @@ pipeline {
                 cleanWs()
             }
         }
-
         stage('Clone Repo') {
             steps {
                 git branch: 'main', url: 'https://github.com/TodorM123/spring-with-maven'
